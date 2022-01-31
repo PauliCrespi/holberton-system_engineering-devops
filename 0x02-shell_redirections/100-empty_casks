@@ -1,2 +1,2 @@
 #!/bin/bash
-find -R -emtpy  | ls -l
+find . -type f -type d -emtpy  | ls -l
