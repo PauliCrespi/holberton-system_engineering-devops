@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -type d -emtpy  | ls -l
+find -empty -print f "%f\n"
