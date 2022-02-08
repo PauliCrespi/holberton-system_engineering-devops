@@ -1,2 +1,2 @@
 #!/bin/bash
-printf ($(expr T$RUEKNOWLEDGE + 128)(
+echo "$(expr T$RUEKNOWLEDGE + 128)"
