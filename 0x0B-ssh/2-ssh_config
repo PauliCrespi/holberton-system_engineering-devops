@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #task 2
-ssh -i ~/.ssh/school ubuntu@54.147.23.54 -PreferredAuthentications=no
+ssh -i ~/.ssh/school ubuntu@54.226.206.178
