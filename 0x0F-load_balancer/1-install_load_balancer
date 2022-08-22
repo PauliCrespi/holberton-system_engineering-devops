@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # proxy config
 
-apt update
-apt upgrade -y
-apt install -y haproxy
+apt-get update
+apt-get install -y haproxy
 cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.default
 echo "
 listen 4377-lb-01
@@ -15,5 +14,4 @@ listen 4377-lb-01
         server 4377-web-01 54.226.206.178 check
         server 4377-web-02 50.19.175.7 check
 " >> /etc/haproxy/haproxy.cfg
-systemctl restart haproxy
-
+service haproxy restart
