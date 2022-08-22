@@ -13,8 +13,8 @@ printf %s "
 
         backend http_back
 		balance roundrobin
-		server 4436-web-01 107.23.23.248:80 check
-		server 4436-web-02 107.21.59.242:80 check
+		server 4377-web-01 54.226.206.178 check
+		server 4377-web-02 50.19.175.7 check
 " >> /etc/haproxy/haproxy.cfg
 
 systemctl restart haproxy
