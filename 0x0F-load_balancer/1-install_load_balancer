@@ -4,17 +4,16 @@
 apt update
 apt upgrade -y
 apt install -y haproxy
-
-printf %s "
-        frontend http_front
-		bind *:80
-		stats uri /haproxy?stats
-		default_backend http_back
-
-        backend http_back
-		balance roundrobin
-		server 4377-web-01 54.226.206.178 check
-		server 4377-web-02 50.19.175.7 check
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.default
+echo "
+listen 4377-lb-01
+        bind *:80
+        mode http
+        balance roundrobin
+        option httpclose
+        option forwardfor
+        server 4377-web-01 54.226.206.178 check
+        server 4377-web-02 50.19.175.7 check
 " >> /etc/haproxy/haproxy.cfg
-
 systemctl restart haproxy
+
