@@ -14,3 +14,4 @@ then
 else
 	domainInfo "$1" "$2"
 fi
+
