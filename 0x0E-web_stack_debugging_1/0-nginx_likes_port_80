@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-"""task 0"""
+#task 0 debug
 cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
 service nginx restart
