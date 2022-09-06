@@ -17,7 +17,7 @@ if __name__ == "__main__":
         if item.get('completed') is True:
             NUMBER_OF_DONE_TASKS += 1
         TOTAL_NUMBER_OF_TASKS += 1
-    print("Employee {} is done with tasks ({}/{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
     for item in resp_t:
         if item.get('completed') is True:
