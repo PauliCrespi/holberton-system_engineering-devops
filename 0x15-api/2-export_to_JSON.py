@@ -17,9 +17,9 @@ if __name__ == "__main__":
     idd = argv[1]
     for item in resp_t:
         list_t = {}
-        list_t["username"] = resp_u.json()["username"]
-        list_t["completed"] = str(item.get('completed'))
         list_t["task"] = item.get('title')
+        list_t["completed"] = str(item.get('completed'))
+        list_t["username"] = resp_u.json()["username"]
         todos.append(list_t)
     dictionary[idd] = todos
     with open(fname, 'w+') as f:
